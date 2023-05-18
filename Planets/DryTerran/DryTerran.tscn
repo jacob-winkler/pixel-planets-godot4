@@ -121,10 +121,10 @@ void fragment() {
 "
 
 [sub_resource type="Gradient" id=2]
-offsets = PoolRealArray( 0, 0.25, 0.5, 0.75, 1 )
-colors = PoolColorArray( 1, 0.537255, 0.2, 1, 0.901961, 0.270588, 0.223529, 1, 0.678431, 0.184314, 0.270588, 1, 0.321569, 0.2, 0.247059, 1, 0.239216, 0.160784, 0.211765, 1 )
+offsets = PackedFloat32Array( 0, 0.25, 0.5, 0.75, 1 )
+colors = PackedColorArray( 1, 0.537255, 0.2, 1, 0.901961, 0.270588, 0.223529, 1, 0.678431, 0.184314, 0.270588, 1, 0.321569, 0.2, 0.247059, 1, 0.239216, 0.160784, 0.211765, 1 )
 
-[sub_resource type="GradientTexture" id=3]
+[sub_resource type="GradientTexture2D" id=3]
 gradient = SubResource( 2 )
 
 [sub_resource type="ShaderMaterial" id=4]
@@ -144,17 +144,17 @@ shader_param/should_dither = true
 shader_param/colors = SubResource( 3 )
 
 [node name="DryTerran" instance=ExtResource( 1 )]
-margin_right = -412.0
-margin_bottom = -200.0
-rect_min_size = Vector2( 0, 0 )
+offset_right = -412.0
+offset_bottom = -200.0
+custom_minimum_size = Vector2( 0, 0 )
 size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 2 )
 
 [node name="Land" type="ColorRect" parent="." index="0"]
 material = SubResource( 4 )
-margin_right = 100.0
-margin_bottom = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Planets/Asteroids/Asteroids.shader" type="Shader" id=1]
+[ext_resource path="res://Planets/Asteroids/Asteroids.gdshader" type="Shader" id=1]
 [ext_resource path="res://Planets/Planet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Planets/Asteroids/Asteroid.gd" type="Script" id=3]
 
@@ -19,15 +19,15 @@ shader_param/seed = 1.567
 shader_param/should_dither = true
 
 [node name="Asteroid" instance=ExtResource( 2 )]
-margin_right = -412.0
-margin_bottom = -200.0
-rect_min_size = Vector2( 100, 100 )
+offset_right = -412.0
+offset_bottom = -200.0
+custom_minimum_size = Vector2( 100, 100 )
 script = ExtResource( 3 )
 
 [node name="Asteroid" type="ColorRect" parent="." index="0"]
 material = SubResource( 1 )
-margin_right = 100.0
-margin_bottom = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

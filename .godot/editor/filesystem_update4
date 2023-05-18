@@ -1,0 +1,5 @@
+res://default_env.tres
+res://GUI/GUI.tscn
+res://GUI/Theme.tres
+res://GUI/StarParticles.tres
+res://GUI/GUI.gd

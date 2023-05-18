@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Planets/Rivers/LandRivers.shader" type="Shader" id=1]
-[ext_resource path="res://Planets/LandMasses/Clouds.shader" type="Shader" id=2]
+[ext_resource path="res://Planets/Rivers/LandRivers.gdshader" type="Shader" id=1]
+[ext_resource path="res://Planets/LandMasses/Clouds.gdshader" type="Shader" id=2]
 [ext_resource path="res://Planets/Rivers/Rivers.gd" type="Script" id=3]
 
 [sub_resource type="ShaderMaterial" id=1]
@@ -49,8 +49,8 @@ shader_param/time = 0.0
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -412.0
-margin_bottom = -200.0
+offset_right = -412.0
+offset_bottom = -200.0
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -58,16 +58,16 @@ __meta__ = {
 
 [node name="Land" type="ColorRect" parent="."]
 material = SubResource( 1 )
-margin_right = 100.0
-margin_bottom = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Cloud" type="ColorRect" parent="."]
 material = SubResource( 2 )
-margin_right = 100.0
-margin_bottom = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

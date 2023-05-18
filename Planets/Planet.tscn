@@ -5,9 +5,9 @@
 [node name="Planet" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -312.0
-margin_bottom = -100.0
-rect_min_size = Vector2( 200, 200 )
+offset_right = -312.0
+offset_bottom = -100.0
+custom_minimum_size = Vector2( 200, 200 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource( 4 )

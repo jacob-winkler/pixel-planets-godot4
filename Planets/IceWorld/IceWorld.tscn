@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Planets/Planet.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Planets/LandMasses/PlanetUnder.shader" type="Shader" id=2]
+[ext_resource path="res://Planets/LandMasses/PlanetUnder.gdshader" type="Shader" id=2]
 [ext_resource path="res://Planets/IceWorld/IceWorld.gd" type="Script" id=3]
-[ext_resource path="res://Planets/LandMasses/Clouds.shader" type="Shader" id=4]
+[ext_resource path="res://Planets/LandMasses/Clouds.gdshader" type="Shader" id=4]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
@@ -35,9 +35,9 @@ uniform float light_border_1 : hint_range(0.0, 1.0) = 0.4;
 uniform float light_border_2 : hint_range(0.0, 1.0) = 0.5;
 uniform float lake_cutoff : hint_range(0.0, 1.0);
 
-uniform vec4 color1 : hint_color;
-uniform vec4 color2 : hint_color;
-uniform vec4 color3 : hint_color;
+uniform vec4 color1 : source_color;
+uniform vec4 color2 : source_color;
+uniform vec4 color3 : source_color;
 
 uniform float size = 50.0;
 uniform int OCTAVES : hint_range(0, 20, 1);
@@ -162,31 +162,31 @@ shader_param/seed = 1.14
 shader_param/time = 0.0
 
 [node name="Planet" instance=ExtResource( 1 )]
-margin_right = -412.0
-margin_bottom = -200.0
-rect_min_size = Vector2( 0, 0 )
+offset_right = -412.0
+offset_bottom = -200.0
+custom_minimum_size = Vector2( 0, 0 )
 script = ExtResource( 3 )
 
 [node name="PlanetUnder" type="ColorRect" parent="." index="0"]
 material = SubResource( 1 )
-margin_right = 100.0
-margin_bottom = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Lakes" type="ColorRect" parent="." index="1"]
 material = SubResource( 3 )
-margin_right = 100.0
-margin_bottom = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Clouds" type="ColorRect" parent="." index="2"]
 material = SubResource( 4 )
-margin_right = 100.0
-margin_bottom = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }

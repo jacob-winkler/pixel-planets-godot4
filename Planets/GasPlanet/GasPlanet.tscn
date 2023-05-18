@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Planets/GasPlanet/GasPlanet.gd" type="Script" id=1]
-[ext_resource path="res://Planets/GasPlanet/GasPlanet.shader" type="Shader" id=2]
+[ext_resource path="res://Planets/GasPlanet/GasPlanet.gdshader" type="Shader" id=2]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )
@@ -46,9 +46,9 @@ shader_param/time = 0.0
 [node name="Control" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_right = -412.0
-margin_bottom = -200.0
-rect_pivot_offset = Vector2( 100, 100 )
+offset_right = -412.0
+offset_bottom = -200.0
+pivot_offset = Vector2( 100, 100 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -56,16 +56,16 @@ __meta__ = {
 
 [node name="Cloud" type="ColorRect" parent="."]
 material = SubResource( 1 )
-margin_right = 100.0
-margin_bottom = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Cloud2" type="ColorRect" parent="."]
 material = SubResource( 2 )
-margin_right = 100.0
-margin_bottom = 100.0
+offset_right = 100.0
+offset_bottom = 100.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
